@@ -167,7 +167,7 @@ namespace Microsoft.Extensions.DependencyInjection
             builder.Services.TryAddTransient<IReferenceTokenStore, DefaultReferenceTokenStore>();
             builder.Services.TryAddTransient<IUserConsentStore, DefaultUserConsentStore>();
             builder.Services.TryAddTransient<IHandleGenerationService, DefaultHandleGenerationService>();
-            builder.Services.TryAddTransient<IPersistentGrantSerializer, PersistentGrantSerializer>();
+            builder.Services.TryAddSingleton<IPersistentGrantSerializer, PersistentGrantSerializer>();
             builder.Services.TryAddTransient<IEventService, DefaultEventService>();
             builder.Services.TryAddTransient<IEventSink, DefaultEventSink>();
             builder.Services.TryAddTransient<IUserCodeService, DefaultUserCodeService>();
